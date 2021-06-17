@@ -31,7 +31,7 @@ namespace BankAccount
             Acc_Checkings.accountHolderName.Add("Prasad");
             Acc_Checkings.accountNumber = 100012;
             Acc_Checkings.Credit(1000);
-            Acc_Checkings.Debit(300);
+            Acc_Checkings.Debit(1300);
             foreach (var value in Acc_Checkings.listofTransactions)
             {
                 Console.WriteLine(value);

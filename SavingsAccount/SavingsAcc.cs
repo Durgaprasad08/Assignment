@@ -11,8 +11,13 @@ namespace SavingsAccount
     {
         public override void Debit(double Withdrawn)
         {
-            listofTransactions.Add("You Withdrawn " + Withdrawn + "rupees at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            if (balanceAmount < Withdrawn)
+            {
+                listofTransactions.Add("You Withdrawn " + Withdrawn + "rupees at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             balanceAmount = balanceAmount - Withdrawn * 1.1;
+            }
+            else
+                Console.WriteLine("Insufficient amount in your account");
         }
     }
 }
